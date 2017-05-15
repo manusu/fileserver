@@ -6,6 +6,7 @@ import (
 func Test_base64(t *testing.T){
     str := "test"
     res,_=base64Decode(base64Encode([]byte(str)))
+    t.Log(string(res))
     if string(res)!=str{
         t.Error("test failed")
     }
